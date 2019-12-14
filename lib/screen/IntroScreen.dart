@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:battery/mainPage.dart';
-import 'package:battery/slideRoute.dart';
+import 'package:battery/screen/mainPage.dart';
+import 'package:battery/screen/slideRoute.dart';
 
 void main() => runApp(IntroScreen());
 

@@ -2,7 +2,7 @@ import 'dart:convert' show utf8;
 import 'dart:typed_data';
 
 import 'package:convert/convert.dart';
-import 'package:battery/ethereum_util.dart';
+import 'package:battery/screen/ethereum_util.dart';
 import 'package:battery/src/utils.dart'
     show intToBuffer, isHexString, padToEven, stripHexPrefix;
 
