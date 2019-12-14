@@ -16,13 +16,13 @@ import './changePw.dart';
 import './logInsetting.dart';
 import './manageAlarm.dart';
 
-void main() => runApp(NabiApp());
+void main() => runApp(BlotteryApp());
 
-class NabiApp extends StatelessWidget {
+class BlotteryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Nabi',
+      title: 'Blottery',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color(0xffffffff),
