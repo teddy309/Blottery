@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import './IntroScreen.dart';
-import './SplashScreen.dart';
-import './recoveryRate.dart';
-import './signIn.dart';
-import './serviceAgreement.dart';
-import './serviceAgrInfo.dart';
-import './personalInfo.dart';
-import './signUpByEmail.dart';
-import './signInByEmail.dart';
-import './findPW.dart';
-import './myPage.dart';
-import './mainPage.dart';
-import './search.dart';
-import './changePw.dart';
-import './logInsetting.dart';
-import './manageAlarm.dart';
+import 'screen/IntroScreen.dart';
+import 'screen/SplashScreen.dart';
+import 'screen/recoveryRate.dart';
+import 'screen/signIn.dart';
+import 'screen/serviceAgreement.dart';
+import 'screen/serviceAgrInfo.dart';
+import 'screen/personalInfo.dart';
+import 'screen/signUpByEmail.dart';
+import 'screen/signInByEmail.dart';
+import 'screen/findPW.dart';
+import 'screen/myPage.dart';
+import 'screen/mainPage.dart';
+import 'screen/search.dart';
+import 'screen/changePw.dart';
+import 'screen/logInsetting.dart';
+import 'screen/manageAlarm.dart';
 
 void main() => runApp(BlotteryApp());
 
