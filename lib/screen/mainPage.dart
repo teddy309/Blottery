@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:charts_flutter/flutter.dart' as charts;
 import './myPage.dart';
 import './recoveryRate.dart';
+import '../widget/battery_widget.dart';
 
 class MainPage extends StatelessWidget{
   Widget build(BuildContext context){
@@ -184,7 +185,10 @@ class _MainScreenState extends State<MainScreen> {
               ),
               centerTitle: false,
             ),
-            
+            Container(
+              child: DataTableWidget(),
+              height: 450,
+            )
           ],
         ),
       ),
