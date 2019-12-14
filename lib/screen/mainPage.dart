@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:charts_flutter/flutter.dart' as charts;
 import './myPage.dart';
 import './recoveryRate.dart';
-import '../widget/battery_widget.dart';
+//import '../widget/battery_widget.dart';
 
 class MainPage extends StatelessWidget{
   Widget build(BuildContext context){
@@ -27,119 +27,7 @@ class _MainScreenState extends State<MainScreen> {
     
   @override
   Widget build(BuildContext context) {
-    
-    /*void showBottom() {
-      showModalBottomSheet<void>(
-        context: context,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: const Radius.circular(30.0),
-            topRight: const Radius.circular(30.0),  
-          ),
-        ),
-        builder: (BuildContext context) {
-          return Container(
-            height: 140.0,
-            decoration: new BoxDecoration(
-              color: Colors.white,
-              borderRadius: new BorderRadius.only(
-                topLeft: const Radius.circular(30.0),
-                topRight: const Radius.circular(30.0),
-              ),
-            ),
-            child: new Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                AppBar(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      topLeft: const Radius.circular(30.0),
-                      topRight: const Radius.circular(30.0),  
-                    ),
-                  ),
-                  elevation: 0.0,
-                  leading: Container(),
-                  actions: [
-                    new IconButton(
-                      onPressed: () => Navigator.pop(context),
-                      icon: Icon(
-                        Icons.clear,
-                      ),
-                      color: Color.fromARGB(0xFF, 0xFF, 0x8D, 0x88),
-                    ),
-                  ],
-                  title: new Text(
-                    '검사지 종류',
-                    style: TextStyle(
-                      fontFamily: 'Spoqa Han San',
-                      fontSize: 14.0,
-                      color: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  centerTitle: true,
-                  backgroundColor: Color.fromARGB(0xFF, 0xFF, 0xFF, 0xFF),
-                ),      
-                Divider(indent:10, endIndent: 10),
-                Container(
-                    padding: EdgeInsets.only(top: 5.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Spacer(),
-                        ButtonTheme(
-                          minWidth: 130.0,
-                          height: 43.0,
-                          child: new FlatButton(
-                              child: new Text(
-                                '수술전',
-                                style: TextStyle(
-                                  fontFamily: 'Spoqa Han San',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13.0,
-                                  color: Color.fromARGB(0xFF, 0x3B, 0x3B, 0x4D),
-                                ),
-                              ),
-                              color: Color.fromARGB(0xFF, 0xFF, 0xF0, 0xED),
-                              disabledColor:
-                                  Color.fromARGB(0xFF, 0xFF, 0xF0, 0xED),
-                              onPressed: null,
-                              shape: new RoundedRectangleBorder(
-                                  borderRadius:
-                                      new BorderRadius.circular(7.0))),
-                        ),
-                        Spacer(),
-                        ButtonTheme(
-                            minWidth: 130.0,
-                            height: 43.0,
-                            child: new FlatButton(
-                                child: new Text(
-                                  '수술후',
-                                  style: TextStyle(
-                                    fontFamily: 'Spoqa Han San',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 13.0,
-                                    color: Color.fromARGB(0xFF, 0x3B, 0x3B, 0x4D),
-                                  ),
-                                ),
-                                color: Color.fromARGB(0xFF, 0xFF, 0xF0, 0xED),
-                                disabledColor:
-                                    Color.fromARGB(0xFF, 0xFF, 0xF0, 0xED),
-                                onPressed: null,
-                                shape: new RoundedRectangleBorder(
-                                    borderRadius:
-                                        new BorderRadius.circular(7.0)))),
-                        Spacer(),
-                      ],
-                    ),
-                  )
-              ],
-            ),
-          );
-        },
-      );
-    }*/
-  
+   
     Widget myRecord = Scaffold(
       appBar: AppBar(
         elevation: 0.0,
@@ -173,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
               backgroundColor: Color.fromARGB(0xFF, 0xFF, 0xFF, 0xFF),
               automaticallyImplyLeading: false,
               title: Text(
-                '배터리 만료날짜 해당 리스트',
+                '배터리 회수율',
                 style: TextStyle(
                   fontSize: 14.0,
                   fontFamily: 'Spoqa Han San',
@@ -185,10 +73,10 @@ class _MainScreenState extends State<MainScreen> {
               ),
               centerTitle: false,
             ),
-            Container(
-              child: DataTableWidget(),
-              height: 450,
-            )
+            // Container(
+            //   child: DataTableWidget(),
+            //   height: 450,
+            // )
           ],
         ),
       ),
@@ -213,6 +101,17 @@ class _MainScreenState extends State<MainScreen> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(
+             Icons.list,
+              color: Color.fromARGB(0xFF, 0x88, 0x88, 0x88),
+            ),
+            activeIcon: Icon(
+              Icons.list,
+              color: Color.fromARGB(0xFF, 0x00, 0x00, 0x99),
+            ),
+            title: Text('배터리리스트'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
               Icons.pie_chart,
               color: Color.fromARGB(0xFF, 0x88, 0x88, 0x88),
             ),
@@ -222,18 +121,6 @@ class _MainScreenState extends State<MainScreen> {
               ),
             title: Text('배터리회수율'),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-             Icons.list,
-              color: Color.fromARGB(0xFF, 0x88, 0x88, 0x88),
-            ),
-            activeIcon: Icon(
-              Icons.list,
-              color: Color.fromARGB(0xFF, 0x00, 0x00, 0x99),
-            ),
-            title: Text('만료날짜'),
-          ),
-          
           BottomNavigationBarItem(
             icon: Image(
               image: AssetImage(

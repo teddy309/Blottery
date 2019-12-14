@@ -47,17 +47,6 @@ class _RecoveryRateState extends State<RecoveryRate>
                   color: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),
                 ),
               ),
-              /*actions: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.search),
-                  color: Color.fromARGB(0xFF, 0x00, 0x00, 0x99),
-              ),
-                  onPressed: () => showSearch(
-                    context: context,
-                    delegate: Search(),
-                  ),
-                ),
-              ],*/
               pinned: true,
               floating: true,
               forceElevated: boxIsScrolled,
@@ -66,9 +55,9 @@ class _RecoveryRateState extends State<RecoveryRate>
                 labelColor: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),
                 indicatorColor: Color.fromARGB(0xFF, 0x00, 0x00, 0x99),
                 tabs: <Widget>[
-                  Tab(text: '   일별   '),
-                  Tab(text: '   월별   '),
-                  Tab(text: '   년별   '),
+                  Tab(text: '   만료날짜   '),
+                  Tab(text: '   제조사별   '),
+                  Tab(text: '   지역별   '),
                 ],
                 controller: _tabController,
               ),
