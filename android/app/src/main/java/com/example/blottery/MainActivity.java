@@ -1,4 +1,4 @@
-package com.example.nabi;
+package com.example.blottery;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
