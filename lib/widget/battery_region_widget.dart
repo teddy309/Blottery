@@ -25,7 +25,7 @@ class DataTableWidgetState extends State<DataTableWidget> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: SizedBox(
-        width: width * 1.7,
+        width: width * 1.6,
         child: ListView(
           children: <Widget>[
             buildDataTable(),

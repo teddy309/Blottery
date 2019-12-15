@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './myPage.dart';
 import './recoveryRate.dart';
-import '../widget/battery_main_widget.dart';
+//import '../widget/battery_main_widget.dart';
 
 class TracePath extends StatelessWidget{
   Widget build(BuildContext context){
@@ -73,7 +73,7 @@ class _PathTracingState extends State<PathTracing> {
               centerTitle: false,
             ),
             Container(
-              child: RecoveryWidget(),
+              //child: RecoveryWidget(),
               height: 450,
             )
           ],
