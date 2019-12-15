@@ -74,9 +74,9 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
     if (columnIndex == 2) {
       setState(() {
         if (ascending) {
-          batteries.sort((a, b) => a.state.compareTo(b.state));
+          batteries.sort((a, b) => a.dueDate.compareTo(b.dueDate));
         } else {
-          batteries.sort((a, b) => b.state.compareTo(a.state));
+          batteries.sort((a, b) => b.dueDate.compareTo(a.dueDate));
         }
         this.ascending = ascending;
       });
