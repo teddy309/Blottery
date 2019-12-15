@@ -1,5 +1,5 @@
-import 'package:battery/data/battery_state_data.dart';
-import 'package:battery/Model/battery_state.dart';
+import 'package:battery/data/battery_recovery_data.dart';
+import 'package:battery/Model/battery_recovery.dart';
 import 'package:flutter/material.dart';
 
 class RecoveryWidget extends StatefulWidget {
@@ -40,7 +40,7 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
   var newColumn = [list1, list2].expand((x) => x).toList();
   Widget buildDataTable() => DataTable(
         sortAscending: ascending,
-        sortColumnIndex: 1,
+        sortColumnIndex: 2,
         columns: newColumn
             .map(
               (String column) => DataColumn(
@@ -58,14 +58,16 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
                     DataCell(Text('${battery.state}')),
                     DataCell(Text('${battery.dueDate}')),
                     DataCell(
-                      Text('자세히 보기',
-                        style: TextStyle(
-                          fontSize: 8,
-                          fontFamily: 'Nanum Gothic',
-                          letterSpacing: 0.09,
-                          color: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),
-                        ),
-                      ),
+                      Icon(
+                        Icons.menu),
+                      // Text('자세히 보기',
+                      //   style: TextStyle(
+                      //     fontSize: 15,
+                      //     fontFamily: 'Nanum Gothic',
+                      //     letterSpacing: 0.09,
+                      //     color: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),
+                      //   ),
+                      // ),
                       onTap: (){
                         Navigator.pushNamed(context, '/');
                       }
@@ -78,7 +80,7 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
       );
 
   void onSortColumn({int columnIndex, bool ascending}) {
-    if (columnIndex == 1) {
+    if (columnIndex == 2) {
       setState(() {
         if (ascending) {
           batteries.sort((a, b) => a.state.compareTo(b.state));
