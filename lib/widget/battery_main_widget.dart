@@ -25,7 +25,7 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: SizedBox(
-        width: width * 1.7,
+        width: width * 1,
         child: ListView(
           children: <Widget>[
             buildDataTable(),
