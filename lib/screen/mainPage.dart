@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import './myPage.dart';
 import './recoveryRate.dart';
 import '../widget/battery_main_widget.dart';
+import '../widget/piechart_widget.dart';
 
 class MainPage extends StatelessWidget{
   Widget build(BuildContext context){
@@ -74,8 +75,12 @@ class _MainScreenState extends State<MainScreen> {
               centerTitle: false,
             ),
             Container(
+              child: PieChartWidget(),
+              height: 200,
+            ),
+            Container(
               child: RecoveryWidget(),
-              height: 450,
+              height: 250,
             )
           ],
         ),
