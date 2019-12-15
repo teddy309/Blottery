@@ -41,7 +41,7 @@ class DueDateWidgetState extends State<DueDateWidget> {
   var newColumn = [list1, list2].expand((x) => x).toList();
   Widget buildDataTable() => DataTable(
         sortAscending: ascending,
-        sortColumnIndex: 1,
+        sortColumnIndex: 2,
         columns: newColumn
             .map(
               (String column) => DataColumn(
@@ -71,7 +71,7 @@ class DueDateWidgetState extends State<DueDateWidget> {
       );
 
   void onSortColumn({int columnIndex, bool ascending}) {
-    if (columnIndex == 1) {
+    if (columnIndex == 2) {
       setState(() {
         if (ascending) {
           batteries.sort((a, b) => a.dueDate.compareTo(b.dueDate));
