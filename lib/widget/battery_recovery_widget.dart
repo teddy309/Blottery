@@ -25,7 +25,7 @@ class DataTableWidgetState extends State<DataTableWidget> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: SizedBox(
-        width: width * 1.7,
+        width: width * 1,
         child: ListView(
           children: <Widget>[
             buildDataTable(),
@@ -37,7 +37,7 @@ class DataTableWidgetState extends State<DataTableWidget> {
 
   Widget buildDataTable() => DataTable(
         sortAscending: ascending,
-        sortColumnIndex: 1,
+        sortColumnIndex: 2,
         columns: batteryColumns
             .map(
               (String column) => DataColumn(
@@ -53,9 +53,7 @@ class DataTableWidgetState extends State<DataTableWidget> {
                   cells: [
                     DataCell(Text('${battery.batteryID}')),
                     DataCell(Text('${battery.state}')),
-                    DataCell(Text('${battery.dueDate}')),
-                    DataCell(Text('${battery.performance}')),
-                    DataCell(Text('${battery.grant}')),
+                    DataCell(Text('${battery.dueDate}'))
                   ],
                   // onSelectChanged: (bool selected) =>
                   //     onSelectedRowChanged(selected: selected, battery: battery),
@@ -64,7 +62,7 @@ class DataTableWidgetState extends State<DataTableWidget> {
       );
 
   void onSortColumn({int columnIndex, bool ascending}) {
-    if (columnIndex == 1) {
+    if (columnIndex == 2) {
       setState(() {
         if (ascending) {
           batteries.sort((a, b) => a.state.compareTo(b.state));

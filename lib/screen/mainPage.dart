@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:charts_flutter/flutter.dart' as charts;
 import './myPage.dart';
 import './recoveryRate.dart';
-import '../widget/battery_main_widget.dart';
+import '../widget/battery_recovery_widget.dart';
 import '../widget/piechart_widget.dart';
 
 class MainPage extends StatelessWidget{
@@ -62,7 +62,7 @@ class _MainScreenState extends State<MainScreen> {
               backgroundColor: Color.fromARGB(0xFF, 0xFF, 0xFF, 0xFF),
               automaticallyImplyLeading: false,
               title: Text(
-                '배터리 회수율',
+                '회수되지 않은 배터리',
                 style: TextStyle(
                   fontSize: 14.0,
                   fontFamily: 'Spoqa Han San',
@@ -79,7 +79,7 @@ class _MainScreenState extends State<MainScreen> {
               height: 200,
             ),
             Container(
-              child: RecoveryWidget(),
+              child: DataTableWidget(),
               height: 250,
             )
           ],

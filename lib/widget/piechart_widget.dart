@@ -10,19 +10,15 @@ class PieChartWidgetState extends State<PieChartWidget> {
   bool toggle = false;
   Map<String, double> dataMap = Map();
   List<Color> colorList = [
-    Colors.red,
-    Colors.green,
     Colors.blue,
-    Colors.yellow,
+    Colors.red,
   ];
 
   @override
   void initState() {
     super.initState();
-    dataMap.putIfAbsent("Flutter", () => 5);
-    dataMap.putIfAbsent("React", () => 3);
-    dataMap.putIfAbsent("Xamarin", () => 2);
-    dataMap.putIfAbsent("Ionic", () => 2);
+    dataMap.putIfAbsent("회수", () => 93.7);
+    dataMap.putIfAbsent("미회수", () => 6.3);
   }
 
   @override
