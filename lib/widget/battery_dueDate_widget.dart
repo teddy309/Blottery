@@ -25,7 +25,7 @@ class DueDateWidgetState extends State<DueDateWidget> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: SizedBox(
-        width: width * 1,
+        width: width * 1.1,
         child: ListView(
           children: <Widget>[
             buildDataTable(),
@@ -37,7 +37,7 @@ class DueDateWidgetState extends State<DueDateWidget> {
 
 
   static var list1 = ['내용'];
-  static var list2 = batteryColumns.sublist(0, 2);
+  static var list2 = batteryColumns;
   var newColumn = [list1, list2].expand((x) => x).toList();
   Widget buildDataTable() => DataTable(
         sortAscending: ascending,
@@ -54,7 +54,12 @@ class DueDateWidgetState extends State<DueDateWidget> {
             .map((Battery battery) => DataRow(
                   selected: selectedBatteries.contains(battery),
                   cells: [
-                    DataCell(Text('아이콘으로')),
+                    DataCell(
+                      Icon(Icons.menu),
+                      onTap: (){
+                        Navigator.pushNamed(context, '/');
+                      }
+                    ),
                     DataCell(Text('${battery.batteryID}')),
                     DataCell(Text('${battery.dueDate}')),
                     DataCell(Text('${battery.performance}')),
