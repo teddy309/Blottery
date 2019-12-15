@@ -11,7 +11,7 @@ import 'screen/signInByEmail.dart';
 import 'screen/findPW.dart';
 import 'screen/myPage.dart';
 import 'screen/mainPage.dart';
-import 'screen/search.dart';
+//import 'screen/search.dart';
 import 'screen/changePw.dart';
 import 'screen/logInsetting.dart';
 import 'screen/manageAlarm.dart';

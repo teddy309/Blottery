@@ -1,5 +1,5 @@
-import 'package:battery/data/battery.dart';
-import 'package:battery/Model/battery.dart';
+import 'package:battery/data/battery_dueDate_data.dart';
+import 'package:battery/Model/battery_dueDate.dart';
 import 'package:flutter/material.dart';
 
 class DataTableWidget extends StatefulWidget {

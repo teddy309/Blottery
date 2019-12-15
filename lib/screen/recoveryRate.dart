@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'category01.dart';
 import 'category02.dart';
 import 'category03.dart';
+import 'category04.dart';
 
 class RecoveryRate extends StatefulWidget {
   final Widget child;
@@ -21,7 +22,7 @@ class _RecoveryRateState extends State<RecoveryRate>
   
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: 3);
+    _tabController = TabController(vsync: this, length: 4);
     _scrollViewController = ScrollController(initialScrollOffset: 0.0);
   }
 
@@ -56,6 +57,7 @@ class _RecoveryRateState extends State<RecoveryRate>
                 indicatorColor: Color.fromARGB(0xFF, 0x00, 0x00, 0x99),
                 tabs: <Widget>[
                   Tab(text: '   만료날짜   '),
+                  Tab(text: '   상태별   '),
                   Tab(text: '   제조사별   '),
                   Tab(text: '   지역별   '),
                 ],
@@ -69,6 +71,7 @@ class _RecoveryRateState extends State<RecoveryRate>
             Category01(),
             Category02(),
             Category03(),
+            Category04(),
           ],
           controller: _tabController,
         ),

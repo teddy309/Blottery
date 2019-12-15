@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-import '../widget/battery_widget.dart';
+//import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import '../widget/battery_dueDate_widget.dart';
 
 class Category01Tab extends StatefulWidget {
   final Widget child;
@@ -14,7 +14,7 @@ class _Category01TabState extends State<Category01Tab> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 15.0),
+      padding: EdgeInsets.only(left: 10.0),
       child: ListView(
         scrollDirection: Axis.vertical,
         children: <Widget>[
