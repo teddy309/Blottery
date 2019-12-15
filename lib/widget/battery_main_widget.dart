@@ -10,7 +10,7 @@ class RecoveryWidget extends StatefulWidget {
 class RecoveryWidgetState extends State<RecoveryWidget> {
   bool ascending;
   List<Battery> selectedBatteries;
-
+  
   @override
   void initState() {
     super.initState();
@@ -25,7 +25,7 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: SizedBox(
-        width: width * 1.7,
+        width: width * 1,
         child: ListView(
           children: <Widget>[
             buildDataTable(),
@@ -35,10 +35,14 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
     );
   }
 
+  static var list1 = batteryColumns.sublist(0, 3);
+  static var list2 = ['비고'];
+  var newColumn = [list1, list2].expand((x) => x).toList();
+
   Widget buildDataTable() => DataTable(
         sortAscending: ascending,
         sortColumnIndex: 1,
-        columns: batteryColumns.sublist(0, 3)
+        columns: newColumn
             .map(
               (String column) => DataColumn(
                     label: Text(column),
@@ -54,6 +58,19 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
                     DataCell(Text('${battery.batteryID}')),
                     DataCell(Text('${battery.state}')),
                     DataCell(Text('${battery.dueDate}')),
+                    DataCell(
+                      Text('자세히 보기',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Nanum Gothic',
+                          letterSpacing: 0.09,
+                          color: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),
+                        ),
+                      ),
+                      onTap: (){
+                        Navigator.pushNamed(context, '/');
+                      }
+                    ),
                   ],
                   // onSelectChanged: (bool selected) =>
                   //     onSelectedRowChanged(selected: selected, battery: battery),
@@ -89,4 +106,5 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
 
     return () {};
   }
+
 }

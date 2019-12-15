@@ -15,6 +15,7 @@ import 'screen/mainPage.dart';
 import 'screen/changePw.dart';
 import 'screen/logInsetting.dart';
 import 'screen/manageAlarm.dart';
+import 'screen/pathTrace.dart';
 
 void main() => runApp(BlotteryApp());
 
@@ -45,6 +46,7 @@ class BlotteryApp extends StatelessWidget {
         '/changePW' : (context) => ChangePassword(),
         '/loginSetting' : (context) => LogInSetting(),
         '/manageAlarm' : (context) => AlarmSetting(),
+        '/tracePath' : (context) => PathTracing(),
       },
     );
   }
