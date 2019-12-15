@@ -2,14 +2,17 @@ import 'package:meta/meta.dart';
 
 class Battery {
   final int batteryID;
-  final String manufacturer;
+  final String region;
+  final String dueDate;
+  final double performance;
   final double grant;
-  final String batteryType;
-  
+
   const Battery({
     @required this.batteryID,
-    @required this.manufacturer,
+    @required this.region,
+    @required this.dueDate,
+    @required this.performance,
     @required this.grant,
-    @required this.batteryType,
   });
 }
+
