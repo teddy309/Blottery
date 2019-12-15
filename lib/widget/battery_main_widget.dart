@@ -60,7 +60,7 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
                     DataCell(
                       Text('자세히 보기',
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 8,
                           fontFamily: 'Nanum Gothic',
                           letterSpacing: 0.09,
                           color: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),

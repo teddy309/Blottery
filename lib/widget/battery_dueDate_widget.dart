@@ -35,22 +35,26 @@ class DataTableWidgetState extends State<DataTableWidget> {
     );
   }
 
+
+  static var list1 = ['내용'];
+  static var list2 = batteryColumns.sublist(0, 2);
+  var newColumn = [list1, list2].expand((x) => x).toList();
   Widget buildDataTable() => DataTable(
         sortAscending: ascending,
         sortColumnIndex: 1,
-        columns: batteryColumns
+        columns: newColumn
             .map(
               (String column) => DataColumn(
-                    label: Text(column),
-                    onSort: (int columnIndex, bool ascending) => onSortColumn(
+                label: Text(column),
+                onSort: (int columnIndex, bool ascending) => onSortColumn(
                         columnIndex: columnIndex, ascending: ascending),
                   ),
-            )
-            .toList(),
+            ).toList(),
         rows: batteries
             .map((Battery battery) => DataRow(
                   selected: selectedBatteries.contains(battery),
                   cells: [
+                    DataCell(Text('아이콘으로')),
                     DataCell(Text('${battery.batteryID}')),
                     DataCell(Text('${battery.dueDate}')),
                     DataCell(Text('${battery.performance}')),
