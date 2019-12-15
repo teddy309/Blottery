@@ -17,6 +17,7 @@ import 'screen/logInsetting.dart';
 import 'screen/manageAlarm.dart';
 import 'screen/pathTrace.dart';
 import 'page/dueDate_page.dart';
+import 'page/recovery_page.dart';
 
 void main() => runApp(BlotteryApp());
 
@@ -49,6 +50,7 @@ class BlotteryApp extends StatelessWidget {
         '/manageAlarm' : (context) => AlarmSetting(),
         '/tracePath' : (context) => PathTracing(),
         '/dueDatePage' : (context) => DueDatePage(),
+        '/recoveryPage' : (context) => RecoveryPage(),
       },
     );
   }

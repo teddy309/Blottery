@@ -60,7 +60,7 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
                     DataCell(
                       Icon(Icons.menu),
                       onTap: (){
-                        Navigator.pushNamed(context, '/');
+                        Navigator.pushNamed(context, '/recoveryPage');
                       }
                     ),
                   ],
