@@ -5,6 +5,7 @@ import './myPage.dart';
 import './recoveryRate.dart';
 import '../widget/battery_recovery_widget.dart';
 import '../widget/piechart_widget.dart';
+import '../widget/battery_main_widget.dart';
 
 class MainPage extends StatelessWidget{
   Widget build(BuildContext context){
@@ -79,7 +80,7 @@ class _MainScreenState extends State<MainScreen> {
               height: 200,
             ),
             Container(
-              child: DataTableWidget(),
+              child: RecoveryWidget(),
               height: 250,
             )
           ],
