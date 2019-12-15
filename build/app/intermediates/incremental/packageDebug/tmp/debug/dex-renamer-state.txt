@@ -1,0 +1,4 @@
+#Sun Dec 15 19:00:47 KST 2019
+base.0=C\:\\Users\\user\\git\\Blottery\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
