@@ -55,8 +55,8 @@ class DataTableWidgetState extends State<DataTableWidget> {
                     DataCell(Text('${battery.dueDate}')),
                     DataCell(Text('${battery.performance}')),
                   ],
-                  onSelectChanged: (bool selected) =>
-                      onSelectedRowChanged(selected: selected, battery: battery),
+                  // onSelectChanged: (bool selected) =>
+                  //     onSelectedRowChanged(selected: selected, battery: battery),
                 ))
             .toList(),
       );

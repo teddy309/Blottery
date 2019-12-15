@@ -1,5 +1,5 @@
-import 'package:battery/data/battery_manufacturer_data.dart';
-import 'package:battery/Model/battery_manufacturer.dart';
+import 'package:battery/data/battery_recovery_data.dart';
+import 'package:battery/Model/battery_recovery.dart';
 import 'package:flutter/material.dart';
 
 class DataTableWidget extends StatefulWidget {
@@ -25,7 +25,7 @@ class DataTableWidgetState extends State<DataTableWidget> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: SizedBox(
-        width: width * 1.4,
+        width: width * 1.7,
         child: ListView(
           children: <Widget>[
             buildDataTable(),
@@ -52,8 +52,9 @@ class DataTableWidgetState extends State<DataTableWidget> {
                   selected: selectedBatteries.contains(battery),
                   cells: [
                     DataCell(Text('${battery.batteryID}')),
-                    DataCell(Text('${battery.manufacturer}')),
-                    DataCell(Text('${battery.batteryType}')),
+                    DataCell(Text('${battery.state}')),
+                    DataCell(Text('${battery.dueDate}')),
+                    DataCell(Text('${battery.performance}')),
                     DataCell(Text('${battery.grant}')),
                   ],
                   // onSelectChanged: (bool selected) =>
@@ -66,9 +67,9 @@ class DataTableWidgetState extends State<DataTableWidget> {
     if (columnIndex == 1) {
       setState(() {
         if (ascending) {
-          batteries.sort((a, b) => a.manufacturer.compareTo(b.manufacturer));
+          batteries.sort((a, b) => a.state.compareTo(b.state));
         } else {
-          batteries.sort((a, b) => b.manufacturer.compareTo(a.manufacturer));
+          batteries.sort((a, b) => b.state.compareTo(a.state));
         }
         this.ascending = ascending;
       });
