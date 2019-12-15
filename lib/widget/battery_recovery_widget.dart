@@ -1,6 +1,8 @@
 import 'package:battery/data/battery_recovery_data.dart';
 import 'package:battery/Model/battery_recovery.dart';
 import 'package:flutter/material.dart';
+import 'package:battery/page/dueDate_page.dart';
+import 'package:battery/screen/signIn.dart';
 
 class DataTableWidget extends StatefulWidget {
   @override
@@ -51,7 +53,13 @@ class DataTableWidgetState extends State<DataTableWidget> {
             .map((Battery battery) => DataRow(
                   selected: selectedBatteries.contains(battery),
                   cells: [
-                    DataCell(Text('${battery.batteryID}')),
+                    DataCell(
+                      Text('${battery.batteryID}'),
+                      onTap: (){
+                        Navigator.of(context).pushReplacement(
+                          new MaterialPageRoute(builder: (context) => SignIn()));
+                      },
+                    ),
                     DataCell(Text('${battery.state}')),
                     DataCell(Text('${battery.dueDate}'))
                   ],
@@ -65,9 +73,9 @@ class DataTableWidgetState extends State<DataTableWidget> {
     if (columnIndex == 2) {
       setState(() {
         if (ascending) {
-          batteries.sort((a, b) => a.state.compareTo(b.state));
+          batteries.sort((a, b) => a.dueDate.compareTo(b.dueDate));
         } else {
-          batteries.sort((a, b) => b.state.compareTo(a.state));
+          batteries.sort((a, b) => b.dueDate.compareTo(a.dueDate));
         }
         this.ascending = ascending;
       });
