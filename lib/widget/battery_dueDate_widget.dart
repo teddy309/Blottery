@@ -1,6 +1,7 @@
 import 'package:battery/data/battery_dueDate_data.dart';
 import 'package:battery/Model/battery_dueDate.dart';
 import 'package:flutter/material.dart';
+import 'package:battery/page/dueDate_page.dart';
 
 class DueDateWidget extends StatefulWidget {
   @override
@@ -57,7 +58,7 @@ class DueDateWidgetState extends State<DueDateWidget> {
                     DataCell(
                       Icon(Icons.menu),
                       onTap: (){
-                        Navigator.pushNamed(context, '/');
+                        Navigator.pushNamed(context, '/dueDatePage');
                       }
                     ),
                     DataCell(Text('${battery.batteryID}')),
