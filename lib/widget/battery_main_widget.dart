@@ -58,16 +58,7 @@ class RecoveryWidgetState extends State<RecoveryWidget> {
                     DataCell(Text('${battery.state}')),
                     DataCell(Text('${battery.dueDate}')),
                     DataCell(
-                      Icon(
-                        Icons.menu),
-                      // Text('자세히 보기',
-                      //   style: TextStyle(
-                      //     fontSize: 15,
-                      //     fontFamily: 'Nanum Gothic',
-                      //     letterSpacing: 0.09,
-                      //     color: Color.fromARGB(0xFF, 0x33, 0x33, 0x33),
-                      //   ),
-                      // ),
+                      Icon(Icons.menu),
                       onTap: (){
                         Navigator.pushNamed(context, '/');
                       }
