@@ -25,12 +25,12 @@ class _DueDatePageState extends State<DueDatePage> {
                           'Block 1',
                           style: TextStyle(fontWeight: FontWeight.bold),),
                         SizedBox(height: 15),
-                        // Row(children: <Widget>[
-                        //   new Text('data :'),
-                        //   SizedBox(height: 20),
-                        //   new Text('   '),
-                        //   new Text('0x46e8dd67c5d32be8d46e8dd67c5d32')
-                        // ],),
+                        Row(children: <Widget>[
+                          new Text('data :'),
+                          SizedBox(height: 20),
+                          new Text('   '),
+                          new Text('0x46e8dd67c5d32be8d46e8dd67c5d32')
+                        ],),
                         Row(children: <Widget>[
                           new Text('BMID :'),
                           SizedBox(height: 20),
@@ -144,12 +144,12 @@ class _DueDatePageState extends State<DueDatePage> {
                           'Block 2',
                           style: TextStyle(fontWeight: FontWeight.bold),),
                         SizedBox(height: 15),
-                        // Row(children: <Widget>[
-                        //   new Text('data :'),
-                        //   SizedBox(height: 20),
-                        //   new Text('   '),
-                        //   new Text('0x46e8dd67c5d32be8d46e8dd67c5d32')
-                        // ],),
+                        Row(children: <Widget>[
+                          new Text('data :'),
+                          SizedBox(height: 20),
+                          new Text('   '),
+                          new Text('0x46e8dd67c5d32be8d46e8dd67c5d32')
+                        ],),
                         Row(children: <Widget>[
                           new Text('BMID :'),
                           SizedBox(height: 20),
@@ -262,12 +262,12 @@ class _DueDatePageState extends State<DueDatePage> {
                           'Block 3',
                           style: TextStyle(fontWeight: FontWeight.bold),),
                         SizedBox(height: 15),
-                        // Row(children: <Widget>[
-                        //   new Text('data :'),
-                        //   SizedBox(height: 20),
-                        //   new Text('   '),
-                        //   new Text('0x46e8dd67c5d32be8d46e8dd67c5d32')
-                        // ],),
+                        Row(children: <Widget>[
+                          new Text('data :'),
+                          SizedBox(height: 20),
+                          new Text('   '),
+                          new Text('0x46e8dd67c5d32be8d46e8dd67c5d32')
+                        ],),
                         Row(children: <Widget>[
                           new Text('BMID :'),
                           SizedBox(height: 20),

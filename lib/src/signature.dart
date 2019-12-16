@@ -57,7 +57,6 @@ Uint8List privateKeyToPublicKey(Uint8List privateKey) {
   final privateKeyNum = decodeBigInt(privateKey);
   final p = params.G * privateKeyNum;
 
-  //skip the type flag, https://github.com/ethereumjs/ethereumjs-util/blob/master/index.js#L319
   return Uint8List.view(p.getEncoded(false).buffer, 1);
 }
 
