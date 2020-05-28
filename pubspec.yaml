@@ -1,0 +1,79 @@
+name: battery
+description: To check the flow of waste batteries with blockchain.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^0.3.0
+  dotted_border: ^1.0.0
+  
+  cupertino_icons: ^0.1.2
+  page_view_indicator: ^0.3.0+1
+  dots_indicator: ^0.0.5+1
+  shared_preferences: ^0.5.3+4
+  dio: ^2.1.13
+  http: ^0.12.0+2
+  rxdart: ^0.22.1+1
+  provider: ^3.0.0+1
+  charts_flutter: ^0.8.1
+  flutter_datetime_picker: ^1.2.8
+  pie_chart: ^3.1.1
+
+  #ethereum
+  meta: ^1.1.6
+  convert: ^2.1.1
+  quiver: '>=2.0.0 <3.0.0'
+  pointycastle: ^1.0.1
+  equatable: ^0.2.3
+  collection: ^1.14.11
+  json_schema: ^2.2.0
+  json_annotation: ^3.0.0
+  buffer: ^1.0.6
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  #ethereum
+  build_runner: ^1.3.0
+  json_serializable: ^3.0.0
+  path: ^1.6.2
+  test: ^1.6.2
+
+flutter:
+  uses-material-design: true
+
+  fonts: 
+    - family: Nanum Gothic
+      fonts: 
+        - asset: fonts/NanumGothic_Regular.ttf
+    - family: Nanum Gothic bold
+      fonts:
+        - asset: fonts/NanumGothic_bold.ttf
+    - family: Spoqa Han San
+      fonts:
+        - asset: fonts/SpoqaHanSans_Regular.ttf
+    - family: Montserrat Semi Bold
+      fonts:
+        - asset: fonts/Montserrat-SemiBold.ttf
+    - family: AppleSD Gothic Semi Bold
+      fonts:
+        - asset: fonts/AppleSDGothicNeoSB.ttf
+    - family: AppleSD Gothic Light
+      fonts:
+        - asset: fonts/AppleSDGothicNeoL.ttf
+        
+  assets:
+    - images/logo.png
+    - images/kakao.png
+    - images/naver.png
+    - images/mail.png
+    - images/combined_shape.png
+    - images/document.png
+    - images/edit_2.png
+    - images/notifications_bell_button.png
